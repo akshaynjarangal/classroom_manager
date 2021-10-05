@@ -1,11 +1,9 @@
 import 'package:classroom_manager/services/providerclass.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'screens/homepage.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -15,9 +13,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
           ChangeNotifierProvider<RoomProvider>(
-              create: (_) => RoomProvider()),
-          
-        ],
+              create: (_) => RoomProvider())],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Classroom Manager',

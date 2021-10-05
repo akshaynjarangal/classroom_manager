@@ -10,7 +10,7 @@ class RegistrationList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final regdata = Provider.of<RoomProvider>(context);
+  final regdata = Provider.of<RoomProvider>(context);
     Widget home = Scaffold(
       appBar: AppBar(
         centerTitle: false,

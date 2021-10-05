@@ -38,6 +38,7 @@ String? selectedid;
 String? selectedid2;
   @override
   Widget build(BuildContext context) {
+    final pro = Provider.of<RoomProvider>(context);
     return Scaffold(
       backgroundColor: Colors.white,
         appBar: AppBar(
@@ -54,7 +55,7 @@ String? selectedid2;
           elevation: 0,
           backgroundColor: Colors.white,
         ),
-        body: SafeArea(
+        body:pro.loading==true?Center(child: CupertinoActivityIndicator()): SafeArea(
           child: Padding(
             padding:  EdgeInsets.symmetric(horizontal: 15),
             child: GestureDetector(

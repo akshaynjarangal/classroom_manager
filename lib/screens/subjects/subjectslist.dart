@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 class SubjectList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final pro = Provider.of<RoomProvider>(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
@@ -53,7 +54,7 @@ class SubjectList extends StatelessWidget {
                     ),
                   ),
                 ),
-                Consumer<RoomProvider>(builder: (context, data, child) {
+                pro.loading==true?CupertinoActivityIndicator() :Consumer<RoomProvider>(builder: (context, data, child) {
                   return ListView.builder(
                       scrollDirection: Axis.vertical,
                       physics: ScrollPhysics(),

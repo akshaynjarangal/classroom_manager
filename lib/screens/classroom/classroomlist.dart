@@ -14,6 +14,7 @@ class ClassroomList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final pro = Provider.of<RoomProvider>(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
@@ -66,7 +67,7 @@ class ClassroomList extends StatelessWidget {
                     ),
                   ),
                 ),
-                Consumer<RoomProvider>(builder: (context, data, child) {
+                pro.loading==true?Center(child: CupertinoActivityIndicator()): Consumer<RoomProvider>(builder: (context, data, child) {
                   return ListView.builder(
                       scrollDirection: Axis.vertical,
                       physics: ScrollPhysics(),

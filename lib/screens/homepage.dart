@@ -13,7 +13,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
-    WidgetsFlutterBinding.ensureInitialized();
     Provider.of<RoomProvider>(context,listen: false).getData(context);
     super.initState();
   }
@@ -26,23 +25,24 @@ class _HomePageState extends State<HomePage> {
 }
 
 class HomeBody extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    // final server = Uri.https(baseurl,endpoint2+"2",params);
-    // final url = Uri.parse("$server");
-    // print(url);
-    return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              ClassroomManagerHeading(),
-              RegisterBanner(),//This is registration banner
-              ManageText(),
-              GridSection(),
-            ],
+    final status= Provider.of<RoomProvider>(context);
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: 
+          status.loading == true ? Center(child: CupertinoActivityIndicator()):
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                ClassroomManagerHeading(),
+                RegisterBanner(),//This is registration banner
+                ManageText(),
+                GridSection(),
+              ],
+            ),
           ),
         ),
       ),

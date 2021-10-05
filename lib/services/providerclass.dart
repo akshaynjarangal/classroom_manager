@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_final_fields, avoid_print
-
 import 'dart:async';
 import 'package:classroom_manager/modelclass/class_detail.dart';
 import 'package:classroom_manager/modelclass/classroom.dart';
@@ -10,8 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
 import 'apis.dart';
-//import 'package:http/http.dart' as http;
-
 class RoomProvider with ChangeNotifier{
 SubjectsModel? subjectslist = SubjectsModel();
 StudentsModel? studentslist = StudentsModel();
