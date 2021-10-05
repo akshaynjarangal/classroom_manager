@@ -1,6 +1,6 @@
-# classroom_manager
+# Classroom manager
 
-Classroom Manager
+Classroom Manager is a student management app.
 
 ## Getting Started
 
