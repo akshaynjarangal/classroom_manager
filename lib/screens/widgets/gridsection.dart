@@ -1,13 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:classroom_manager/screens/classroom/classroomlist.dart';
+import 'package:classroom_manager/screens/registration/registrationlist.dart';
+import 'package:classroom_manager/screens/students/studentslist.dart';
+import 'package:classroom_manager/screens/subjects/subjectslist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import '../classroomlist.dart';
-import '../registrationlist.dart';
-import '../studentslist.dart';
-import '../subjectslist.dart';
 
 class GridSection extends StatelessWidget {
   const GridSection({Key? key,

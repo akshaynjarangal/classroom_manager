@@ -1,6 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:classroom_manager/screens/reg_list_empty_state.dart';
+import 'package:classroom_manager/screens/widgets/reg_list_empty_state.dart';
 import 'package:classroom_manager/services/providerclass.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

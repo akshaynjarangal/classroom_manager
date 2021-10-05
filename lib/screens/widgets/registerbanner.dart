@@ -1,10 +1,8 @@
+import 'package:classroom_manager/screens/registration/registration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
-
-import '../registration.dart';
-
 class RegisterBanner extends StatelessWidget {
   const RegisterBanner({
     Key? key,

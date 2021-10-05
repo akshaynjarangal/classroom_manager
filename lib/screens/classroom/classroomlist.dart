@@ -1,13 +1,14 @@
 
 // ignore_for_file: prefer_const_constructors
 
-import 'package:classroom_manager/screens/classroom_details.dart';
 import 'package:classroom_manager/services/providerclass.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:provider/provider.dart';
+
+import 'classroom_details.dart';
 
 class ClassroomList extends StatelessWidget {
   const ClassroomList({Key? key}) : super(key: key);
