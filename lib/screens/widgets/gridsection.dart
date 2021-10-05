@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:classroom_manager/screens/classroom/classroomlist.dart';
 import 'package:classroom_manager/screens/registration/registrationlist.dart';
@@ -10,9 +9,6 @@ import 'package:hexcolor/hexcolor.dart';
 
 
 class GridSection extends StatelessWidget {
-  const GridSection({Key? key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +30,7 @@ class GridSection extends StatelessWidget {
                         HexColor("#7ea4f3")
                       ])),
                       child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: EdgeInsets.all(10.0),
                         child: Column(
                           children: [
                             Expanded(child: Hero(
@@ -56,7 +52,7 @@ class GridSection extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+             SizedBox(
               width: 10,
             ),
             //==> SUBJECTS <====================================
@@ -74,13 +70,13 @@ class GridSection extends StatelessWidget {
                         HexColor("#987ff4")
                       ])),
                       child: Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding:  EdgeInsets.all(10.0),
                         child: Column(
                           children: [
                             Expanded(child: Hero(
                               tag: 'subjects',
                               child: SvgPicture.asset("assets/images/subjects.svg",fit: BoxFit.contain,))),
-                          SizedBox(height:5),
+                           SizedBox(height:5),
                           Container(
                             height: 25,
                             width: 100,
@@ -88,7 +84,7 @@ class GridSection extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(5),
                             ),
-                            child: Center(child: Text("Subjects")),
+                            child:  Center(child: Text("Subjects")),
                           )
                           ],
                         ),
@@ -98,7 +94,7 @@ class GridSection extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+         SizedBox(
       height: 10,
     ),
     Row(

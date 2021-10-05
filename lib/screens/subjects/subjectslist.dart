@@ -1,4 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:classroom_manager/services/providerclass.dart';
 import 'package:flutter/cupertino.dart';
@@ -25,7 +24,7 @@ class SubjectList extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal:15),
+            padding:  EdgeInsets.symmetric(horizontal:15),
             child: Column(
               children: [
                 Container(
@@ -35,7 +34,7 @@ class SubjectList extends StatelessWidget {
                       gradient: LinearGradient(
                           colors: [HexColor("#cc7af3"), HexColor("#987ff4")])),
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding:  EdgeInsets.all(10.0),
                     child: Row(
                       children: [
                         Expanded(
@@ -63,7 +62,7 @@ class SubjectList extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final datalist = data.subjectslist?.subjects?[index];
                         return Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          padding:  EdgeInsets.symmetric(vertical: 10),
                           child: Container(
                             padding: EdgeInsets.all(15),
                             decoration: BoxDecoration(

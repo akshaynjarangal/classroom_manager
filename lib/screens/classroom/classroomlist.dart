@@ -1,5 +1,4 @@
 
-// ignore_for_file: prefer_const_constructors
 
 import 'package:classroom_manager/services/providerclass.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,7 +10,6 @@ import 'package:provider/provider.dart';
 import 'classroom_details.dart';
 
 class ClassroomList extends StatelessWidget {
-  const ClassroomList({Key? key}) : super(key: key);
 
 
   @override
@@ -34,7 +32,7 @@ class ClassroomList extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+            padding:  EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               children: [
                 Container(
@@ -44,7 +42,7 @@ class ClassroomList extends StatelessWidget {
                       gradient: LinearGradient(
                           colors: [HexColor("#83c6f1"), HexColor("#7ea4f3")])),
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding:  EdgeInsets.all(10.0),
                     child: Row(
                       children: [
                         Expanded(

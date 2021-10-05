@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:classroom_manager/screens/widgets/reg_list_empty_state.dart';
 import 'package:classroom_manager/services/providerclass.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,13 +18,13 @@ class RegistrationList extends StatelessWidget {
           onTap:(){
             Navigator.pop(context);
           },
-          child: const Icon(Icons.arrow_back_ios_new_rounded,color: Colors.black,)),
-        title: const Text("Registration",style: TextStyle(color: Colors.black)),
+          child:  Icon(Icons.arrow_back_ios_new_rounded,color: Colors.black,)),
+        title:  Text("Registration",style: TextStyle(color: Colors.black)),
         elevation: 0,
         backgroundColor: Colors.white,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding:  EdgeInsets.symmetric(horizontal: 15),
         child: Column(children: [
           Container(
                     height: 130,
@@ -36,7 +34,7 @@ class RegistrationList extends StatelessWidget {
                             colors: [HexColor("#AAFFA9"),
                                 HexColor("#11FFBD")])),
                     child: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding:  EdgeInsets.all(10.0),
                       child: Row(
                         children: [
                           Expanded(
@@ -47,8 +45,8 @@ class RegistrationList extends StatelessWidget {
                                                         fit: BoxFit.contain,
                                                       ),
                               )),
-                          const SizedBox(height: 5),
-                          const Expanded(
+                           SizedBox(height: 5),
+                           Expanded(
                             child: Text("Registrations",style: TextStyle(color: Colors.white,fontSize:20,fontWeight:FontWeight.bold),)
                           )
                         ],
@@ -57,13 +55,13 @@ class RegistrationList extends StatelessWidget {
                   ),
                   
                   regdata.loading==true?Padding(
-                    padding: const EdgeInsets.all(30.0),
+                    padding:  EdgeInsets.all(30.0),
                     child: CupertinoActivityIndicator(),
                   ): Consumer<RoomProvider>(
                     builder: (context, data,child) {
                       return ListView.builder(
                           scrollDirection: Axis.vertical,
-                          physics: const ScrollPhysics(),
+                          physics:  ScrollPhysics(),
                           shrinkWrap: true,
                           itemCount: data.registrationslist?.registrations?.length,
                           itemBuilder: (context, index) {
@@ -71,9 +69,9 @@ class RegistrationList extends StatelessWidget {
 
                             //final datalist = data.studentslist?.students?[index];
                             return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              padding:  EdgeInsets.symmetric(vertical: 10),
                               child: Container(
-                                padding: const EdgeInsets.all(15),
+                                padding:  EdgeInsets.all(15),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   color: CupertinoColors.extraLightBackgroundGray
@@ -83,30 +81,30 @@ class RegistrationList extends StatelessWidget {
                                   children: [
                                     Row(
                                       children: [
-                                        Text("${index+1}",style: const TextStyle(fontWeight: FontWeight.bold)),
-                                        const SizedBox(width: 15,),
+                                        Text("${index+1}",style:  TextStyle(fontWeight: FontWeight.bold)),
+                                         SizedBox(width: 15,),
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                          children:const[
+                                          children:[
                                             Text('Student ',),
                                             SizedBox(height: 15,),
                                             Text('Subject',),
                                             
                                           ],
                                         ),
-                                        const SizedBox(width: 10,),
+                                         SizedBox(width: 10,),
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children:[
                                             FittedBox(
                                                   child: Text('${data.studentslist?.students?[number![index].student!-1].name}',
-                                                  style: const TextStyle(fontWeight: FontWeight.w600)),
+                                                  style:  TextStyle(fontWeight: FontWeight.w600)),
                                                 ),
-                                            const SizedBox(height:15),
+                                             SizedBox(height:15),
                                             FittedBox(
                                                   child: Text('${data.subjectslist?.subjects?[number![index].subject!-1].name}',
-                                                  style: const TextStyle(fontWeight: FontWeight.w600)),
+                                                  style:  TextStyle(fontWeight: FontWeight.w600)),
                                                 ),
                                             
                                           ],
@@ -142,7 +140,7 @@ class RegistrationList extends StatelessWidget {
                                               data.getData(context);
                                             }
                                           },
-                                          child: const Icon(CupertinoIcons.delete)),
+                                          child:  Icon(CupertinoIcons.delete)),
                                         
                                       ],
                                     ),

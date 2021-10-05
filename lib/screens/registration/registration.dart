@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'dart:convert';
 import 'package:classroom_manager/services/apis.dart';
@@ -10,7 +9,6 @@ import 'package:provider/provider.dart';
 import 'regcomplete.dart';
 
 class Registration extends StatefulWidget {
-  const Registration({Key? key}) : super(key: key);
 
   @override
   State<Registration> createState() => _RegistrationState();
@@ -58,7 +56,7 @@ String? selectedid2;
         ),
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+            padding:  EdgeInsets.symmetric(horizontal: 15),
             child: GestureDetector(
               onTap: () {
                 FocusScope.of(context).requestFocus(FocusNode());
@@ -70,7 +68,7 @@ String? selectedid2;
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        padding:  EdgeInsets.symmetric(vertical: 20),
                         child: FittedBox(
                           child: Hero(
                             tag: 'reg',

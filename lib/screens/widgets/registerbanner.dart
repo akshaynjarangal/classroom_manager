@@ -4,10 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 class RegisterBanner extends StatelessWidget {
-  const RegisterBanner({
-    Key? key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,11 +15,11 @@ class RegisterBanner extends StatelessWidget {
               color: HexColor("#76eccc").withOpacity(0.3),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: const Offset(0, 3), // changes position of shadow
+              offset: Offset(0, 3), // changes position of shadow
             ),
           ],
           borderRadius: BorderRadius.circular(10),
-          gradient:const LinearGradient(colors:[
+          gradient:LinearGradient(colors:[
             Colors.greenAccent,
             Colors.lightBlueAccent
           ]),
@@ -31,7 +27,7 @@ class RegisterBanner extends StatelessWidget {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Hero(
                 tag: 'reg',
                 child: SvgPicture.asset(
@@ -48,25 +44,25 @@ class RegisterBanner extends StatelessWidget {
                 right: 0,
                 child: Column(
                   children: [
-                    const Text(
+                    Text(
                       "Register New Students",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.w600),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 10,
                     ),
                     CupertinoButton(
-                        padding:const EdgeInsets.symmetric(
+                        padding:EdgeInsets.symmetric(
                             horizontal: 20, vertical: 5),
                         color: CupertinoColors.white,
                         child: Text("Register",
                             style:
                                 TextStyle(color: Colors.green[300])),
                         onPressed: () {
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>const Registration()));
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Registration()));
                         })
                   ],
                 ))

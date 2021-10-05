@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer__ructors, prefer__literals_to_create_immutables
 import 'package:classroom_manager/services/providerclass.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 class ClassRoomDetail extends StatefulWidget {
   final String? title;
 
-  const ClassRoomDetail({
+   ClassRoomDetail({
     Key? key,
     this.title,
   }) : super(key: key);
@@ -45,7 +45,7 @@ class _ClassRoomDetailState extends State<ClassRoomDetail> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: const Icon(
+            child:  Icon(
               Icons.arrow_back_ios_new_rounded,
               color: Colors.black,
             )),
@@ -56,12 +56,12 @@ class _ClassRoomDetailState extends State<ClassRoomDetail> {
       ),
       body: status.loading2 == true
           ? Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding:  EdgeInsets.all(20.0),
               child: Center(child: CupertinoActivityIndicator()),
             )
           : Consumer<RoomProvider>(builder: (context, data, child) {
               return Padding(
-                padding: const EdgeInsets.all(15),
+                padding:  EdgeInsets.all(15),
                 child: Form(
                   key: _formKey,
                   child: Column(
@@ -75,7 +75,7 @@ class _ClassRoomDetailState extends State<ClassRoomDetail> {
                               HexColor("#7ea4f3")
                             ])),
                         child: Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding:  EdgeInsets.all(20.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             crossAxisAlignment: CrossAxisAlignment.start,
